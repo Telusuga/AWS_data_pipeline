@@ -1,8 +1,6 @@
 # AWS_data_pipeline
 This is a batch full operational automated data pipeline which takes data from API and loads it into Athena
-![image](https://github.com/user-attachments/assets/65d84019-8209-48d4-81a6-2d3e9aeb0680)
-
-
+![image](https://github.com/user-attachments/assets/ea18188a-80d3-456b-a859-6759ae20b4c5)
 
 The above image is the HLD of the AWS Batch Pipeline 
 
