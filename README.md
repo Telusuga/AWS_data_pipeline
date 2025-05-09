@@ -5,12 +5,25 @@ This is a batch full operational automated data pipeline which takes data from A
 
 The above image is the HLD of the AWS Batch Pipeline 
 
-Functionality of the Pipeline:
+📌 Project Overview
+This project showcases an automated data pipeline designed to pull, process, and store anime data from an external API using a serverless architecture in AWS. The pipeline is optimized for scalability, modularity, and zero manual intervention, highlighting the full utilization of AWS-native services.
 
-The automated pull from an Anime API DB is scheduled daily by Cloud Watch.
+🔧 Functionality of the Pipeline
+Automated Data Ingestion:
+A scheduled CloudWatch Event Rule triggers the pipeline daily to pull fresh data from an Anime API database.
 
-The Extraction and Transformation is handled by Lambda and intermediately the data is moved between S3 Buckets.
+Serverless ETL Process:
+AWS Lambda functions handle the extraction and transformation of the data. Intermediate data is temporarily stored and transferred via Amazon S3 buckets, enabling clean separation of concerns.
 
-The DB choosen was Athena due to which it has the Glue Crawler compatability.
+Data Cataloging and Querying:
+The processed data is made queryable through Amazon Athena, with metadata management handled via AWS Glue Crawlers for schema discovery and updates.
 
-The main goal of the pipeline is to decouple all the resources and a perfect utility of the AWS Services without any intervention
+🎯 Project Goals
+Resource Decoupling:
+Architect the pipeline so that each component functions independently, ensuring maintainability and fault isolation.
+
+Serverless Architecture:
+Leverage AWS services to create a fully serverless, event-driven pipeline, reducing operational overhead and cost.
+
+Automation and Monitoring:
+Achieve full automation with scheduling, processing, and monitoring, ensuring the system runs seamlessly without human intervention.
